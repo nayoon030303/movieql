@@ -1,3 +1,10 @@
+type NaYoon{
+    name:String!,
+    age:Int!,
+    gender:String!
+
+}
+
 type Query{
-    name: String!
+    person:NaYoon
 }
