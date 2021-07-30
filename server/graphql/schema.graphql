@@ -5,12 +5,33 @@ type Movie{
 
 }
 
+type Store{
+    id:Int!
+    address_name:String!
+    category_group_code:String!
+    category_group_name:String!
+    category_name:String!
+    distance:String!
+    phone:String!
+    place_name:String!
+    place_url:String!
+    road_address_name:String!
+    x:String!
+    y:String!
+}
+
+
 type Query{
     movies:[Movie]!
     movie(id: Int!): Movie
+
+    stores:[Store]!
 }
 
 type Mutation{
     addMovie(name: String!,score: Int!):Movie!
     deleteMovie(id:Int!):Boolean
+
+    
+    deleteStore(id:Int!):Boolean
 }
